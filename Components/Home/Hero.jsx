@@ -30,7 +30,9 @@ const hero = useRef(null)
         <h6 className='text-2xl text-zinc-400 w-2/3'>kayzen helps business build and deploy human-like AI enterprise agents in 1 minute to automate chat and calls.</h6>
         <CTA/>
         </div>
-        <div className='h-full w-1/2 bg-blue-100 border'></div>
+        <div className='h-full w-1/2 bg-blue-100 border'>
+        
+        </div>
     </div>
   )
 }
