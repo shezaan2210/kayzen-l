@@ -21,133 +21,102 @@ const BentoGrid = () => {
   const h1 = useRef(null)
   const h2 = useRef(null)
 
-  let tl = gsap.timeline({
-    scrollTrigger:{
-      trigger: '.start',
-      start: '35% bottom',
-      end: 'bottom top',
-      // scrub: true,
-      markers: true,
-    },
-  })
+  // let tl = gsap.timeline({
+  //   scrollTrigger:{
+  //     trigger: '.start',
+  //     start: '35% bottom',
+  //     end: 'bottom top',
+  //     // scrub: true,
+  //     markers: true,
+  //   },
+  // })
 
-useGSAP(()=>{
-  tl.from(h1.current,{
-    opacity: 0,
-    duration: .4,
-    y: 50,
-    ease: 'power4.inOut'
-  })
-  tl.from(h2.current,{
-    opacity: 0,
-    duration: .4,
-    y: 50,
-    ease: 'power4.inOut'
-  })
-})
+// useGSAP(()=>{
+//   tl.from(h1.current,{
+//     opacity: 0,
+//     duration: .4,
+//     y: 50,
+//     ease: 'power4.inOut'
+//   })
+//   tl.from(h2.current,{
+//     opacity: 0,
+//     duration: .4,
+//     y: 50,
+//     ease: 'power4.inOut'
+//   })
+// })
 
   return (
-<div className="start grid grid-cols-4 grid-rows-4 gap-4 p-8 h-screen">
-  {/* 1st box: Appointment Scheduling */}
-  <div className="row-span-2 col-span-1 bg-white rounded-lg p-4 shadow-md backdrop-blur-md">
-    <div className='gsa  w-full h-full flex flex-col items-center justify-center gap-[1vw] font-["gilroy"]'>
-      <div><FaRegCalendarCheck className='text-3xl'/></div>
-      <div className=' bg-red-300 overflow-hidden'><h2 ref={h1} className=" text-2xl font-bold mb-2 text-center">Appointment Scheduling</h2></div>
-      <div className=' bg-red-300 overflow-hidden'><h1 ref={h2} className='text-lg font-semibold mb-2 text-center'>
-        Sync with your calendar to schedule appointments seamlessly.
-      </h1></div>
+    <div className="grid grid-cols-3 grid-rows-3 gap-6 px-[6vw] py-[3vw] h-[150vh] bg-[#F6F6F4]">
+<div className='grid h-full row-span-3 gap-6'>
+      {/* Box 1: Appointment Scheduling - spans 2 rows */}
+      <div className="row-span-1 bg-white rounded-lg p-8 shadow-lg flex flex-col items-center justify-center">
+      <FaRegCalendarCheck className="text-4xl mb-4" />
+      <h2 className="text-2xl font-bold mb-2 text-center">Appointment Scheduling</h2>
+      <p className="text-lg font-medium text-center">
+      Sync with your calendar to schedule appointments seamlessly.
+      </p>
     </div>
-  </div>
 
-  {/* 2nd box: Lead Qualification */}
-  <div className="col-span-1 bg-white rounded-lg p-4 shadow-md backdrop-blur-md">
-    <div className='w-full h-full flex flex-col items-center justify-center gap-[1vw] font-["gilroy"]'>
-      <div><FaPhoneAlt className='text-3xl'/></div>
-      <div className=' bg-red-300 overflow-hidden'><h2 ref={h1} className="text-2xl font-bold mb-2 text-center">Lead Qualification</h2></div>
-      <div className=' bg-red-300 overflow-hidden'><h1 ref={h2} className='text-lg font-semibold mb-2 text-center'>
-        Quickly qualify leads with AI-driven insights for more effective outreach.
-      </h1></div>
-    </div>
-  </div>
-
-  {/* 3rd box: Call Routing */}
-  <div className="col-span-1 bg-white rounded-lg p-4 shadow-md backdrop-blur-md">
-    <div className='w-full h-full flex flex-col items-center justify-center gap-[1vw] font-["gilroy"]'>
-      <div><CiRoute className='text-3xl'/></div>
-      <div className=' bg-red-300 overflow-hidden'><h2 ref={h1} className="text-2xl font-bold mb-2 text-center">Call Routing</h2></div>
-      <div className=' bg-red-300 overflow-hidden'><h1 ref={h2} className='text-lg font-semibold mb-2 text-center'>
-        Efficiently route calls to ensure customers reach the right department.
-      </h1></div>
-    </div>
-  </div>
-
-  {/* 4th box: Lead Generation Engine */}
-  <div className="row-span-2 col-span-1 bg-white rounded-lg p-4 shadow-md backdrop-blur-md">
-    <div className='w-full h-full flex flex-col items-center justify-center gap-[1vw] font-["gilroy"]'>
-      <div><FaDatabase className='text-3xl'/></div>
-      <h2 className="text-2xl font-bold mb-2 text-center">Lead Generation Engine</h2>
-      <h1 className='text-lg font-semibold mb-2 text-center'>
-        Drive leads with an AI-powered engine working 24/7 for your business.
-      </h1>
-    </div>
-  </div>
-
-  {/* 5th box: 24/7 Availability */}
-  <div className="row-span-2 col-span-2 bg-white rounded-lg p-4 shadow-md backdrop-blur-md">
-    <div className='w-full h-full flex flex-col items-center justify-center gap-[1vw] font-["gilroy"]'>
-      <div><BiSupport className='text-3xl'/></div>
-      <h2 className="text-2xl font-bold mb-2 text-center">24/7 Availability</h2>
-      <h1 className='text-lg font-semibold mb-2 text-center'>
-        Always available to provide immediate responses and support.
-      </h1>
-    </div>
-  </div>
-
-  {/* 6th box: AI Personas */}
-  <div className="col-span-1 bg-white rounded-lg p-4 shadow-md backdrop-blur-md">
-    <div className='w-full h-full flex flex-col items-center justify-center gap-[.4vw] font-["gilroy"]'>
-      <div><IoChatbubbles className='text-3xl'/></div>
+       {/* Box 6: AI Personas */}
+       <div className="bg-white row-span-1 rounded-lg p-8 shadow-lg flex flex-col items-center justify-center">
+      <IoChatbubbles className="text-4xl mb-4" />
       <h2 className="text-2xl font-bold mb-2 text-center">AI Personas</h2>
-      <h1 className='text-lg font-semibold mb-2 text-center'>
-        Customize AI personas to enhance engagement and match your brand’s tone.
-      </h1>
+      <p className="text-lg font-medium text-center">
+      Create engaging AI personas for a personalized user experience.
+      </p>
     </div>
-  </div>
-
-  {/* 7th box: Multi-platform Chatbots */}
-  <div className="col-span-2 bg-white rounded-lg p-4 shadow-md backdrop-blur-md">
-    <div className='w-full h-full flex flex-col items-center justify-center gap-[1vw] font-["gilroy"]'>
-      <div><FaGlobe className='text-3xl'/></div>
-      <h2 className="text-2xl font-bold mb-2 text-center">Multi-platform Chatbots</h2>
-      <h1 className='text-lg font-semibold mb-2 text-center'>
-        Engage users on multiple platforms with consistent support across all channels.
-      </h1>
-    </div>
-  </div>
-
-  {/* 8th box: Analytics & Reporting */}
-  <div className="col-span-1 bg-white rounded-lg p-4 shadow-md backdrop-blur-md">
-    <div className='w-full h-full flex flex-col items-center justify-center gap-[1vw] font-["gilroy"]'>
-      <div><FaChartPie className='text-3xl'/></div>
-      <h2 className="text-2xl font-bold mb-2 text-center">Analytics & Reporting</h2>
-      <h1 className='text-lg font-semibold mb-2 text-center'>
-        Gain actionable insights with real-time analytics and comprehensive reports.
-      </h1>
-    </div>
-  </div>
-
-  {/* 9th box: Custom Knowledge Base */}
-  <div className="row-span-2 col-start-4 row-start-3 col-span-1 bg-white rounded-lg p-4 shadow-md backdrop-blur-md">
-    <div className='w-full h-full flex flex-col items-center justify-center gap-[1vw] font-["gilroy"]'>
-      <div><FaBookOpen className='text-3xl'/></div>
-      <h2 className="text-2xl font-bold mb-2 text-center">Custom Knowledge Base</h2>
-      <h1 className='text-lg font-semibold mb-2 text-center'>
-        Develop a self-service knowledge base to support users around the clock.
-      </h1>
-    </div>
-  </div>
 </div>
 
+    {/* Box 2: Lead Qualification */}
+    <div className="bg-white  rounded-lg p-8 shadow-lg flex flex-col items-center justify-center">
+      <FaPhoneAlt className="text-4xl mb-4" />
+      <h2 className="text-2xl font-bold mb-2 text-center">Lead Qualification</h2>
+      <p className="text-lg font-medium text-center">
+      Qualify leads and route them to the right contact effortlessly.
+      </p>
+    </div>
+
+    {/* Box 3: Call Routing */}
+    <div className="bg-white rounded-lg p-8 shadow-lg flex flex-col items-center justify-center h-0vh]">
+      <CiRoute className="text-4xl mb-4" />
+      <h2 className="text-2xl font-bold mb-2 text-center">Call Routing</h2>
+      <p className="text-lg font-medium text-center">
+      Route calls based on natural requests without hold times.
+      </p>
+      <button className=' px-[2vw] py-[1vh] rounded-xl border-black border-[1px] capitalize font-semibold text-md mt-[1vw] '>see it in action</button>
+    </div>
+
+    {/* Box 4: Lead Generation Engine - spans 2 rows */}
+    <div className="row-span-1 bg-white rounded-lg p-8 shadow-lg flex flex-col items-center justify-center">
+      <FaDatabase className="text-4xl mb-4" />
+      <h2 className="text-2xl font-bold mb-2 text-center">Lead Generation Engine</h2>
+      <p className="text-lg font-medium text-center">
+        Drive leads with an AI-powered engine working 24/7 for your business.
+      </p>
+    </div>
+
+    {/* Box 5: 24/7 Availability */}
+    <div className="bg-white rounded-lg p-8 shadow-lg flex flex-col items-center justify-center">
+      <BiSupport className="text-4xl mb-4" />
+      <h2 className="text-2xl font-bold mb-2 text-center">24/7 Availability</h2>
+      <p className="text-lg font-medium text-center">
+      Instant responses with trustworthy and accurate answers.
+      </p>
+      <button className=' px-[2vw] py-[1vh] rounded-xl border-black border-[1px] capitalize font-semibold text-md mt-[1vw] '>learn more</button>
+    </div>
+
+ 
+
+    {/* Box 7: Multi-platform Chatbots - spans 2 columns */}
+    <div className="col-span-2  row-start-3 col-start-2 bg-white rounded-lg p-8 shadow-lg flex flex-col items-center justify-center">
+      <FaGlobe className="text-4xl mb-4" />
+      <h2 className="text-2xl font-bold mb-2 text-center">Multi-platform Chatbots</h2>
+      <p className="text-lg font-medium text-center">
+        Engage users on multiple platforms with consistent support across all channels.
+      </p>
+    </div>
+  </div>
 
 
   )
