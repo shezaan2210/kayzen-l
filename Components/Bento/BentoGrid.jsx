@@ -47,10 +47,10 @@ const BentoGrid = () => {
 // })
 
   return (
-    <div className="grid grid-cols-3 grid-rows-3 gap-6 px-[6vw] py-[3vw] h-[150vh] bg-[#F6F6F4]">
-<div className='grid h-full row-span-3 gap-6'>
+    <div className="grid grid-cols-4 grid-rows-3 gap-6 px-[2vw] py-[2vw] h-[150vh] bg-[#F6F6F4] ">
+
       {/* Box 1: Appointment Scheduling - spans 2 rows */}
-      <div className="row-span-1 bg-white rounded-lg p-8 shadow-lg flex flex-col items-center justify-center">
+      <div className="row-span-2 bg-white rounded-lg p-8 shadow-lg flex flex-col items-center justify-center">
       <FaRegCalendarCheck className="text-4xl mb-4" />
       <h2 className="text-2xl font-bold mb-2 text-center">Appointment Scheduling</h2>
       <p className="text-lg font-medium text-center">
@@ -59,14 +59,13 @@ const BentoGrid = () => {
     </div>
 
        {/* Box 6: AI Personas */}
-       <div className="bg-white row-span-1 rounded-lg p-8 shadow-lg flex flex-col items-center justify-center">
+       <div className="bg-white row-span-1 col-span-2 rounded-lg p-8 shadow-lg flex flex-col items-center justify-center">
       <IoChatbubbles className="text-4xl mb-4" />
       <h2 className="text-2xl font-bold mb-2 text-center">AI Personas</h2>
       <p className="text-lg font-medium text-center">
       Create engaging AI personas for a personalized user experience.
       </p>
     </div>
-</div>
 
     {/* Box 2: Lead Qualification */}
     <div className="bg-white  rounded-lg p-8 shadow-lg flex flex-col items-center justify-center">
@@ -78,7 +77,7 @@ const BentoGrid = () => {
     </div>
 
     {/* Box 3: Call Routing */}
-    <div className="bg-white rounded-lg p-8 shadow-lg flex flex-col items-center justify-center h-0vh]">
+    <div className="bg-white rounded-lg p-8 shadow-lg flex flex-col items-center justify-center col-span-2 ">
       <CiRoute className="text-4xl mb-4" />
       <h2 className="text-2xl font-bold mb-2 text-center">Call Routing</h2>
       <p className="text-lg font-medium text-center">
@@ -88,16 +87,16 @@ const BentoGrid = () => {
     </div>
 
     {/* Box 4: Lead Generation Engine - spans 2 rows */}
-    <div className="row-span-1 bg-white rounded-lg p-8 shadow-lg flex flex-col items-center justify-center">
-      <FaDatabase className="text-4xl mb-4" />
-      <h2 className="text-2xl font-bold mb-2 text-center">Lead Generation Engine</h2>
+    <div className="row-span-2 bg-white rounded-lg p-8 shadow-lg flex flex-col items-center justify-center">
+      <FaBookOpen className="text-4xl mb-4" />
+      <h2 className="text-2xl font-bold mb-2 text-center">Custom Knowledge base</h2>
       <p className="text-lg font-medium text-center">
-        Drive leads with an AI-powered engine working 24/7 for your business.
+      Train your agent with custom data to improve over time.
       </p>
     </div>
 
     {/* Box 5: 24/7 Availability */}
-    <div className="bg-white rounded-lg p-8 shadow-lg flex flex-col items-center justify-center">
+    <div className="bg-white rounded-lg p-8 shadow-lg flex flex-col items-center justify-center col-span-2">
       <BiSupport className="text-4xl mb-4" />
       <h2 className="text-2xl font-bold mb-2 text-center">24/7 Availability</h2>
       <p className="text-lg font-medium text-center">
@@ -109,7 +108,7 @@ const BentoGrid = () => {
  
 
     {/* Box 7: Multi-platform Chatbots - spans 2 columns */}
-    <div className="col-span-2  row-start-3 col-start-2 bg-white rounded-lg p-8 shadow-lg flex flex-col items-center justify-center">
+    <div className="col-span-1   bg-white rounded-lg p-8 shadow-lg flex flex-col items-center justify-center">
       <FaGlobe className="text-4xl mb-4" />
       <h2 className="text-2xl font-bold mb-2 text-center">Multi-platform Chatbots</h2>
       <p className="text-lg font-medium text-center">

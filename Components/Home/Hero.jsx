@@ -30,13 +30,20 @@ const hero = useRef(null)
         <h6 className='text-2xl text-zinc-400 w-2/3'>kayzen helps business build and deploy human-like AI enterprise agents in 1 minute to automate chat and calls.</h6>
         <CTA/>
         </div>
-        <div className='h-full w-1/2 bg-[#FDFDFD] border flex gap-[2vw] px-[1vw] py-[2vw] '>
-        <div className='w-1/2 h-full rounded-2xl overflow-hidden'>
-        <video className='w-full h-[70%]' autoPlay loop muted src="../../videos/hero1.mp4"></video>
-        </div>
-        <div className='w-1/2 h-full flex flex-col justify-center'>
-        <video className='w-full h-[50%] ' autoPlay loop muted src="../../videos/hero2.mp4"></video>
-        </div>
+        <div className='h-full w-1/2 bg-[#FDFDFD] border flex  flex-col'>
+
+       <div className='w-full h-1/2 flex justify-between items-center'>
+       <div className=' w-1/3 h-full'>
+       <video className='w-full h-[70%] object-center object-cover' autoPlay loop muted src="../../videos/hero1.mp4"></video>
+       </div>
+       <div className=' w-1/2 h-full py-[1vw]'>
+       <video className='w-full h-[100%] ' autoPlay loop muted src="../../videos/hero2.mp4"></video>
+       </div>
+       </div>
+
+       <div className='w-full h-1/2 '>
+       <video className='w-full h-[70%] object-center object-cover' autoPlay loop muted src="../../videos/hero3.mp4"></video>
+       </div>
         </div>
     </div>
   )
