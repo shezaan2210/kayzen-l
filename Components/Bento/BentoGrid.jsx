@@ -47,7 +47,7 @@ const BentoGrid = () => {
 // })
 
   return (
-    <div className="grid grid-cols-4 grid-rows-3 gap-6 px-[2vw] py-[2vw] h-[150vh] bg-[#F6F6F4] ">
+    <div className="grid grid-cols-4 grid-rows-3 gap-4 px-[2vw] py-[2vw] h-[135vh] bg-[#F6F6F4] ">
 
       {/* Box 1: Appointment Scheduling - spans 2 rows */}
       <div className="row-span-2 bg-white rounded-lg p-8 shadow-lg flex flex-col items-center justify-center">
